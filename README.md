@@ -1,5 +1,7 @@
 # apiquery
 
+__NOTE: This is a sample application and uses fake data and components to demonstrate basic usage of java and Spring. Please read this thoroughly and let me know if you have any question__
+
 To create the jar file and run the tests, use maven
 ```
 mvn clean install
