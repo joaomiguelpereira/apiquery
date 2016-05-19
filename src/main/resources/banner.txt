@@ -1,6 +1,15 @@
-  ___ ___         .__  .__
- /   |   \   ____ |  | |  |   ____
-/    ~    \_/ __ \|  | |  |  /  _ \
-\    Y    /\  ___/|  |_|  |_(  <_> )
- \___|_  /  \___  >____/____/\____/
-       \/       \/
+NOTES:
+
+This is a simple exercise.
+
+It's goal is to show some programming with Spring Boot and Java to call an external API.
+
+It contains some tests, and all responses are fake.
+
+I have a simple HTTP endpoint running at  http://dummyapi-env.eu-west-1.elasticbeanstalk.com/api/dummy/v.10/query
+
+See https://github.com/joaomiguelpereira/dummyhttpapi
+
+This small exercise only handle some input and call a fake api.
+
+Please see more notes provided.

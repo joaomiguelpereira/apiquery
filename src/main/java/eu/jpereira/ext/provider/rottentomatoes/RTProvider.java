@@ -1,15 +1,14 @@
 package eu.jpereira.ext.provider.rottentomatoes;
 
-import eu.jpereira.ext.NotImementedException;
-import eu.jpereira.ext.provider.ApiProvider;
-import eu.jpereira.ext.query.QueryResult;
+import eu.jpereira.ext.provider.AbstractApiProvider;
+import eu.jpereira.ext.provider.model.MovieQueryResult;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by jpereira on 18/05/2016.
  */
 @Component
-public class RTProvider implements ApiProvider {
+public class RTProvider extends AbstractApiProvider {
 
     private static final String ROTTEN_TOMATOES = "rt";
 
@@ -20,7 +19,9 @@ public class RTProvider implements ApiProvider {
     }
 
     @Override
-    public QueryResult executeQuery(String query) {
-        throw new NotImementedException("Not implemented. Requires creating a new Account on rotten tomatoes");
+    public MovieQueryResult executeMovieQuery(String query) {
+        //Dummy call to some WEB API, without any authorization code or whatsoever
+        return callMovieApi(ROTTEN_TOMATOES, query);
     }
+
 }

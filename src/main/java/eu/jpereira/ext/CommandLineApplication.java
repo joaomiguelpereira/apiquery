@@ -5,7 +5,7 @@ import eu.jpereira.ext.configuration.CommandLineApplicationConfig;
 import eu.jpereira.ext.printer.QueryResultPrinter;
 import eu.jpereira.ext.provider.ApiProvider;
 import eu.jpereira.ext.provider.ApiProviderFactory;
-import eu.jpereira.ext.query.QueryResult;
+import eu.jpereira.ext.provider.model.MovieQueryResult;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -47,8 +47,10 @@ public class CommandLineApplication implements CommandLineRunner {
         Optional<ApiProvider> provider = apiProviderFactory.getApiProvider(api);
 
         if (provider.isPresent()) {
-            QueryResult result = provider.get().executeQuery(query);
-            queryResultPrinter.printResult(result);
+
+            MovieQueryResult result = provider.get().executeMovieQuery(query);
+
+            queryResultPrinter.printMoviesResult(result);
         } else {
             printHelp();
         }

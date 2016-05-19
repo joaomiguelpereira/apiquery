@@ -1,9 +1,9 @@
 package eu.jpereira.ext.provider;
 
 
-import eu.jpereira.ext.query.QueryResult;
+import eu.jpereira.ext.provider.model.MovieQueryResult;
 
-public interface ApiProvider {
+public interface ApiProvider<T> {
 
     /**
      * Check if the prvider can implement the API provided as param
@@ -17,5 +17,5 @@ public interface ApiProvider {
      * @param query
      * @return
      */
-    QueryResult executeQuery(String query);
+    MovieQueryResult executeMovieQuery(String query);
 }

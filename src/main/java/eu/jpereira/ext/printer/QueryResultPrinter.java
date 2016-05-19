@@ -1,12 +1,12 @@
 package eu.jpereira.ext.printer;
 
 
-import eu.jpereira.ext.query.QueryResult;
+import eu.jpereira.ext.provider.model.MovieQueryResult;
 
 /**
  * Prints a result
  */
 public interface QueryResultPrinter {
 
-    void printResult(QueryResult result);
+    void printMoviesResult(MovieQueryResult result);
 }

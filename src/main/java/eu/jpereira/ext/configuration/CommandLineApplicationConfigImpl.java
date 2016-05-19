@@ -2,7 +2,6 @@ package eu.jpereira.ext.configuration;
 
 
 import eu.jpereira.ext.configuration.reader.SystemPropertiesQueryExtractor;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,11 +20,7 @@ public class CommandLineApplicationConfigImpl implements CommandLineApplicationC
     public void loadConfiguration() {
         this.api = systemPropertiesQueryExtractor.readApi();
         this.query = systemPropertiesQueryExtractor.readQuery();
-
-
-
     }
-
 
     /**
      * @inheritDoc
