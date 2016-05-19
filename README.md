@@ -23,7 +23,7 @@ java -jar apiquery-1.0-SNAPSHOT.jar api=apiname movie="movie name"
 
 It just connects to a dummy server (Please see the dummy server here: https://github.com/joaomiguelpereira/dummyhttpapi
 
-It responds always with the same data, when the inputs are validates.
+It responds always with the same data, when the inputs are validated.
 
 
 How to run:
